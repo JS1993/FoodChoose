@@ -101,24 +101,16 @@
     int fruit=arc4random_uniform((int)[self.foodList[0] count]);
     int mainF=arc4random_uniform((int)[self.foodList[1] count]);
     int drink=arc4random_uniform((int)[self.foodList[2] count]);
-    for (int i=0; i<3; i++) {
-        switch (i) {
-            case 0:
-                self.fruitLabel.text=self.foodList[0][fruit];
-                [self.foodPickView selectRow:fruit inComponent:0 animated:YES];
-                break;
-            case 1:
-                self.mainFoodLabel.text=self.foodList[1][mainF];
-                [self.foodPickView selectRow:mainF inComponent:1 animated:YES];
-                break;
-            case 2:
-                self.drinkLabel.text=self.foodList[2][drink];
-                [self.foodPickView selectRow:drink inComponent:2 animated:YES];
-                break;
-            default:
-                break;
-        }
-    }
+    
+    self.fruitLabel.text=self.foodList[0][fruit];
+    [self.foodPickView selectRow:fruit inComponent:0 animated:YES];
+    
+    self.mainFoodLabel.text=self.foodList[1][mainF];
+    [self.foodPickView selectRow:mainF inComponent:1 animated:YES];
+    
+    self.drinkLabel.text=self.foodList[2][drink];
+    [self.foodPickView selectRow:drink inComponent:2 animated:YES];
+
 }
 #pragma mark-pickViewDataSource
 
